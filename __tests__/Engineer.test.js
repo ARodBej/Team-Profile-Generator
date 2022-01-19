@@ -1,7 +1,6 @@
-// using Engineer constructor 
 const Engineer = require('../lib/Engineer');
 
-// creating engineer object  
+// creating the engineer object  
 test('creates an Engineer object', () => {
     const engineer = new Engineer('Sam', 90, 'sam.doe@gmail', 'samdoe66');
     
@@ -15,7 +14,6 @@ test('gets engineer github value', () => {
     expect(engineer.getGithub()).toEqual(expect.stringContaining(engineer.github.toString()));
 });
 
-// gets role from getRole() 
 test('gets role of employee', () => {
     const engineer = new Engineer('Ben', 90, 'ben.smellsw@gmail', 'bensmells98');
 

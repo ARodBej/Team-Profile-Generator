@@ -1,4 +1,4 @@
-// this will create the intern card
+// intern card
 const generateIntern = function (intern) {
     return `
     <div class="col-4 mt-4">
@@ -18,7 +18,7 @@ const generateIntern = function (intern) {
     `;
 };
 
-// this will create the manager card
+// manager card
 const generateManager = function (manager) {
     return `
     <div class = "col-4 mt-4">
@@ -39,7 +39,7 @@ const generateManager = function (manager) {
     `;
 }
 
-//this will create the engineer card
+// engineer card
 const generateEngineer = function (engineer) {
     return `
     <div class = "col-4 mt-4">
@@ -99,8 +99,6 @@ const generateTeamPage = function (employeeCards) {
     <!DOCTYPE html>
     <html lang = "en">
     <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href = "style.css">
@@ -108,8 +106,9 @@ const generateTeamPage = function (employeeCards) {
     <body>
         <header>
         <nav class = "navbar" id = "navbar">
-            <span class= "navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">Team Profile</span>  
+            <span class= "w-100 text-center" id="navbar-text">The Team!</span>  
         </nav>
+        
         </header>
         <main>
             <div class= "container">
@@ -125,5 +124,5 @@ const generateTeamPage = function (employeeCards) {
 
     `;
 }
-//exporting to index
+//exporting to index page
 module.exports = generateHTML;

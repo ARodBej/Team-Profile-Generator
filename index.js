@@ -6,14 +6,12 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern'); 
 
-// node modules 
 const fs = require('fs'); 
 const inquirer = require('inquirer');
 
-// team array
 const teamArray = []; 
 
-// start of manager prompts 
+// start of the prompts
 const addManager = () => {
     return inquirer.prompt ([
         {
@@ -61,6 +59,7 @@ const addManager = () => {
             name: 'officeNumber',
             message: "Please enter the manager's office number",
             validate: nameInput => {
+                //isNaN = is not a number
                 if  (isNaN(nameInput)) {
                     console.log ('Please enter an office number!')
                     return false; 
@@ -127,6 +126,7 @@ const addEmployee = () => {
                 valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
                 if (valid) {
                     return true;
+                    //if user inputs nothing
                 } else {
                     console.log ('Please enter an email!')
                     return false; 
@@ -141,6 +141,7 @@ const addEmployee = () => {
             validate: nameInput => {
                 if (nameInput ) {
                     return true;
+                    //if user input nothing 
                 } else {
                     console.log ("Please enter the employee's github username!")
                 }
@@ -154,6 +155,7 @@ const addEmployee = () => {
             validate: nameInput => {
                 if (nameInput) {
                     return true;
+                    //if user inputs nothing
                 } else {
                     console.log ("Please enter the intern's school!")
                 }
@@ -167,7 +169,7 @@ const addEmployee = () => {
         }
     ])
     .then(employeeData => {
-        // data for the employee types 
+        // This is the data for the employee types 
 
         let { name, id, email, role, github, school, confirmAddEmployee } = employeeData; 
         let employee; 
@@ -195,16 +197,16 @@ const addEmployee = () => {
 };
 
 
-// function to generate HTML page file using file system 
+
 const writeFile = data => {
     fs.writeFile('./dist/index.html', data, err => {
         // if there is an error 
         if (err) {
             console.log(err);
             return;
-        // when the profile is created 
+            //successfuly created
         } else {
-            console.log("Your team profile has been successfully created! Please check out the index.html")
+            console.log("Your team profile has been created!!!! Check the index.html")
         }
     })
 }; 
