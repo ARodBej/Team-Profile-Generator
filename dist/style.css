@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+.card-header, .card-body {
+    background-color: lightcyan;
+}
+
+nav {
+    background-color: lightpink;
+}
+
